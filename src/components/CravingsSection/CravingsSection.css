@@ -1,0 +1,275 @@
+.cravings-section {
+  width: 100%;
+  background: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+.cravings-inner {
+  width: 100%;
+  max-width: 1365px;
+  margin: 0 auto;
+
+  padding: 104px 56px 88px;
+
+  box-sizing: border-box;
+}
+
+/* Heading */
+.cravings-heading {
+  max-width: 900px;
+  margin: 0 auto 67px;
+  text-align: center;
+}
+
+.cravings-heading h2 {
+  margin: 0 0 19px;
+
+  color: #111827;
+  font-family: "Bridgecolate", "Poppins", sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.6px;
+}
+
+.cravings-heading h2 span {
+  color: #3a0995;
+}
+
+.cravings-subtitle {
+  margin: 0 0 8px;
+
+  color: #484553;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.cravings-description {
+  margin: 0;
+
+  color: #111827;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+/* Grid */
+.cravings-grid {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 384px);
+  justify-content: center;
+
+  column-gap: 30px;
+  row-gap: 23.5px;
+}
+
+/* Card */
+.craving-card {
+  width: 384px;
+  height: 472px;
+
+  border-radius: 24px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid #ededed;
+
+  box-shadow:
+    0 24px 50px rgba(58, 9, 149, 0.08),
+    0 4px 12px rgba(17, 24, 39, 0.04);
+}
+
+/* Alternate card background */
+.craving-card:nth-child(odd) {
+  background: #ffffff;
+}
+
+.craving-card:nth-child(even) {
+  background: #f7f2ff;
+}
+
+/* Image area: Figma = 336 × 256 inside 384 card */
+.craving-image {
+  width: 100%;
+  height: 256px;
+
+  padding: 24px 24px 0;
+
+  box-sizing: border-box;
+}
+
+.craving-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 18px;
+}
+
+/* Content */
+.craving-content {
+  flex: 1;
+
+  padding: 23.5px 24px 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  box-sizing: border-box;
+}
+
+.craving-eyebrow {
+  margin: 0 0 14px;
+
+  color: #3a0995;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.craving-content h3 {
+  margin: 0 0 23.5px;
+
+  color: #3a0995;
+  font-family: "Bridgecolate", "Poppins", sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.3px;
+}
+
+.craving-text {
+  margin: 0 0 23.5px;
+
+  color: #484553;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.craving-content a {
+  margin: 0;
+
+  color: #3a0995;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+}
+
+/* Laptop */
+@media (max-width: 1280px) {
+  .cravings-inner {
+    padding: 88px 40px 80px;
+  }
+
+  .cravings-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .craving-card {
+    width: 100%;
+    height: 472px;
+  }
+
+  .craving-image {
+    height: 256px;
+    padding: 22px 22px 0;
+  }
+
+  .craving-content {
+    padding: 23.5px 22px 22px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .cravings-inner {
+    padding: 72px 32px 72px;
+  }
+
+  .cravings-heading {
+    margin-bottom: 52px;
+  }
+
+  .cravings-heading h2 {
+    font-size: 40px;
+  }
+
+  .cravings-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .craving-card {
+    height: 460px;
+  }
+
+  .craving-image {
+    height: 250px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+  .cravings-inner {
+    padding: 60px 20px 64px;
+  }
+
+  .cravings-heading h2 {
+    font-size: 34px;
+  }
+
+  .cravings-subtitle {
+    font-size: 15px;
+  }
+
+  .cravings-description {
+    font-size: 13px;
+  }
+
+  .cravings-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .craving-card {
+    width: 100%;
+    height: auto;
+    min-height: 430px;
+    border-radius: 22px;
+  }
+
+  .craving-image {
+    height: 240px;
+    padding: 18px 18px 0;
+  }
+
+  .craving-image img {
+    border-radius: 16px;
+  }
+
+  .craving-content {
+    padding: 22px 20px 24px;
+  }
+
+  .craving-content h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .craving-text {
+    margin-bottom: 23.5px;
+  }
+}
