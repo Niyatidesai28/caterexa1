@@ -1,5 +1,14 @@
 import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
 
-export default function App() {
+function App() {
+  const path = window.location.pathname;
+
+  if (path === "/about") {
+    return <AboutPage />;
+  }
+
   return <HomePage />;
 }
+
+export default App;

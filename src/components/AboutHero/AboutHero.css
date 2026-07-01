@@ -1,0 +1,258 @@
+.about-hero-section {
+  width: 100%;
+  min-height: 760px;
+  background: #ffffff;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+.about-hero-inner {
+  position: relative;
+  width: 100%;
+  height: 760px;
+  background: #ffffff;
+}
+
+/* Heading */
+.about-hero-title {
+  position: absolute;
+  left: 48px;
+  top: 155px;
+  z-index: 3;
+
+  font-family: "Bricolage Grotesque", "Poppins", sans-serif;
+  font-size: 110px;
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+}
+
+.about-hero-title span {
+  display: block;
+}
+
+.about-title-black {
+  color: #000000;
+}
+
+.about-title-purple {
+  color: #3a0995;
+}
+
+/* Tagline */
+.about-hero-tagline {
+  position: absolute;
+  left: 48px;
+  top: 520px;
+  z-index: 3;
+
+  padding-left: 28px;
+  border-left: 2px solid #3a0995;
+}
+
+.about-hero-tagline p {
+  margin: 0 0 7px;
+
+  color: #24173d;
+  font-family: "Bricolage Grotesque", "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.about-hero-tagline p:nth-child(2),
+.about-hero-tagline p:nth-child(3) {
+  color: #3a0995;
+}
+
+/* Image group */
+.about-image-wrap {
+  position: absolute;
+  left: 720px;
+  top: 78px;
+  z-index: 1;
+
+  width: 700px;
+  height: 600px;
+}
+
+/* Main image */
+.about-main-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 700px;
+  height: 600px;
+
+  display: block;
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 0 0 72px 0;
+}
+
+/* Small white bordered card */
+.about-small-card {
+  position: absolute;
+  left: -92px;
+  top: 395px;
+  z-index: 2;
+
+  width: 280px;
+  height: 260px;
+  padding: 10px;
+
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 22px 50px rgba(17, 24, 39, 0.22);
+
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.about-small-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 16px;
+}
+
+/* Laptop */
+@media (max-width: 1180px) {
+  .about-hero-section {
+    min-height: 720px;
+  }
+
+  .about-hero-inner {
+    height: 720px;
+  }
+
+  .about-hero-title {
+    left: 40px;
+    top: 150px;
+    font-size: 88px;
+    line-height: 0.9;
+  }
+
+  .about-hero-tagline {
+    left: 40px;
+    top: 500px;
+  }
+
+  .about-image-wrap {
+    left: 570px;
+    top: 86px;
+
+    width: 620px;
+    height: 540px;
+  }
+
+  .about-main-image {
+    width: 620px;
+    height: 540px;
+  }
+
+  .about-small-card {
+    width: 220px;
+    height: 220px;
+    left: -72px;
+    top: 335px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .about-hero-section {
+    min-height: auto;
+  }
+
+  .about-hero-inner {
+    height: auto;
+    padding: 76px 32px 90px;
+  }
+
+  .about-hero-title {
+    position: static;
+    font-size: 68px;
+    line-height: 0.95;
+  }
+
+  .about-hero-tagline {
+    position: static;
+    margin-top: 52px;
+  }
+
+  .about-image-wrap {
+    position: relative;
+    left: auto;
+    top: auto;
+
+    width: 100%;
+    height: auto;
+    margin-top: 60px;
+  }
+
+  .about-main-image {
+    position: relative;
+
+    width: 100%;
+    height: 430px;
+
+    border-radius: 0 0 54px 0;
+  }
+
+  .about-small-card {
+    position: relative;
+    left: 32px;
+    top: auto;
+
+    width: 220px;
+    height: 220px;
+    margin-top: -120px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+  .about-hero-inner {
+    padding: 60px 22px 72px;
+  }
+
+  .about-hero-title {
+    font-size: 48px;
+    line-height: 0.95;
+  }
+
+  .about-hero-tagline {
+    margin-top: 42px;
+    padding-left: 22px;
+  }
+
+  .about-hero-tagline p {
+    font-size: 20px;
+  }
+
+  .about-main-image {
+    height: 300px;
+    border-radius: 0 0 38px 0;
+  }
+
+  .about-small-card {
+    width: 180px;
+    height: 180px;
+    margin-top: -100px;
+    left: 20px;
+    padding: 8px;
+    border-radius: 20px;
+  }
+
+  .about-small-image {
+    border-radius: 14px;
+  }
+}

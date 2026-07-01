@@ -32,6 +32,8 @@
   display: flex;
   align-items: center;
   justify-self: start;
+
+  text-decoration: none;
 }
 
 .navbar-logo span {
@@ -69,6 +71,10 @@
   font-weight: 500;
   line-height: 1;
   white-space: nowrap;
+}
+
+.nav-link.active {
+  color: #484553;
 }
 
 .nav-link.active::after {
@@ -128,4 +134,84 @@
 
   cursor: pointer;
   white-space: nowrap;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .navbar-inner {
+    grid-template-columns: auto 1fr auto;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .navbar-menu {
+    gap: 28px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+
+  .start-btn {
+    width: 160px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .top-navbar {
+    height: auto;
+  }
+
+  .navbar-inner {
+    height: auto;
+    min-height: 88px;
+
+    grid-template-columns: 1fr;
+    row-gap: 18px;
+
+    padding: 20px 22px;
+  }
+
+  .navbar-logo {
+    justify-self: center;
+  }
+
+  .navbar-menu {
+    width: 100%;
+    height: auto;
+
+    justify-self: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .nav-link {
+    height: auto;
+    font-size: 14px;
+  }
+
+  .nav-link.active::after {
+    bottom: -8px;
+  }
+
+  .navbar-actions {
+    width: 100%;
+    height: auto;
+
+    justify-content: center;
+    justify-self: center;
+  }
+
+  .signin-btn {
+    height: 44px;
+    font-size: 14px;
+  }
+
+  .start-btn {
+    width: 170px;
+    height: 44px;
+    font-size: 14px;
+  }
 }
