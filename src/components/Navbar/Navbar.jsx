@@ -4,6 +4,7 @@ import EarlySignupModal from "../EarlySignupModal/EarlySignupModal";
 
 export default function Navbar() {
   const path = window.location.pathname;
+  const hash = window.location.hash;
 
   const [isSignupOpen, setIsSignupOpen] = useState(false);
   const [hasTriggeredPopup, setHasTriggeredPopup] = useState(false);
@@ -20,7 +21,6 @@ export default function Navbar() {
 
     const addInteractionListeners = () => {
       if (listenersAdded) return;
-
       listenersAdded = true;
 
       window.addEventListener("scroll", openPopupOnFirstInteraction, {
@@ -54,45 +54,60 @@ export default function Navbar() {
     };
   }, [hasTriggeredPopup]);
 
+  const openSignup = () => {
+    setIsSignupOpen(true);
+    setHasTriggeredPopup(true);
+  };
+
   return (
     <>
       <header className="top-navbar">
         <div className="navbar-inner">
           <a href="/" className="navbar-logo">
-            <span>Caterexa</span>
+            Caterexa
           </a>
 
           <nav className="navbar-menu">
-            <a href="/" className={`nav-link ${path === "/" ? "active" : ""}`}>
-              Business Meal Solutions
+            <a
+              href="/"
+              className={`nav-link ${
+                path === "/" && hash === "" ? "active" : ""
+              }`}
+            >
+              Home
+            </a>
+
+            <a
+              href="/#meal-solutions"
+              className={`nav-link ${
+                path === "/" && hash === "#meal-solutions" ? "active" : ""
+              }`}
+            >
+              Meal Solutions
             </a>
 
             <a href="/#partner" className="nav-link">
-              For Food Provider
+              Caterers
             </a>
 
             <a
               href="/about"
               className={`nav-link ${path === "/about" ? "active" : ""}`}
             >
-              About
+              About Us
+            </a>
+
+            <a
+              href="/contact"
+              className={`nav-link ${path === "/contact" ? "active" : ""}`}
+            >
+              Contact
             </a>
           </nav>
 
           <div className="navbar-actions">
-            <button type="button" className="signin-btn">
-              Sign In
-            </button>
-
-            <button
-              type="button"
-              className="start-btn"
-              onClick={() => {
-                setIsSignupOpen(true);
-                setHasTriggeredPopup(true);
-              }}
-            >
-              Start Ordering
+            <button type="button" className="start-btn" onClick={openSignup}>
+              Get Started
             </button>
           </div>
         </div>
