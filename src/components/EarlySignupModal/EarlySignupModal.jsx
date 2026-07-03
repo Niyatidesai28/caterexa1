@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import "./EarlySignupModal.css";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { db } from "../../firebase";
 
 export default function EarlySignupModal({ isOpen, onClose }) {
   const [formData, setFormData] = useState({
@@ -43,10 +45,13 @@ export default function EarlySignupModal({ isOpen, onClose }) {
     }));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
-    console.log("Early signup form data:", formData);
+    await addDoc(collection(db, "earlySignupResponses"), {
+      ...formData,
+      createdAt: serverTimestamp(),
+    });
 
     alert("Thank you for signing up early!");
 
