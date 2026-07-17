@@ -204,3 +204,21 @@
     font-size: 14px;
   }
 }
+.nav-link {
+  position: relative;
+}
+
+.nav-link.active {
+  color: #4b00c9;
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 3px;
+  border-radius: 999px;
+  background: #4b00c9;
+}

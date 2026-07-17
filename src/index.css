@@ -19,3 +19,7 @@ button,
 a {
   font-family: inherit;
 }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}

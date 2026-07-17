@@ -1,0 +1,21 @@
+.homepage {
+  min-height: 100vh;
+  background: #fffaf4;
+  color: #171717;
+  overflow-x: hidden;
+}
+
+/* Helps navbar anchor scrolling stop below fixed navbar */
+.homepage [data-nav-section] {
+  scroll-margin-top: 110px;
+}
+
+/* Keeps first section clean under navbar */
+#home {
+  min-height: 100vh;
+}
+
+#partner,
+#contact {
+  position: relative;
+}
